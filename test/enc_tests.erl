@@ -14,3 +14,10 @@ decrypt_test() ->
     Enc = enc:encrypt(Input, Seed),
     Result = enc:decrypt(Enc, Seed),
     ?assertEqual(Input, Result).
+
+decrypt_shirt_test() ->
+    Shirt_text = "M$8xU=c_ux5=ux;=u_x8[",
+    Shirt_seed = 3,
+    Expected = "You might fit with us",
+    Result = enc:decrypt(Shirt_text, Shirt_seed),
+    ?assertEqual(Expected, Result).

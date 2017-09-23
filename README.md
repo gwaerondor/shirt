@@ -29,3 +29,8 @@ In the resulting list we will see quite quickly that the seed was 3, so the filt
  {3,"You might fit with us"},
  {8," }u{4al5Q{KaQ{gaQ5{uw"}|...]
 ```
+
+And thus our adventure comes to an end.
+
+## Tests
+You can run the tests with ```make eunit```

@@ -7,3 +7,6 @@ Here's the shirt.
 ![alt text](https://github.com/gwaerondor/shirt/raw/master/shirt.jpg "The shirt.")
 
 It has a weird string at the end, ```M$8xU=c_ux5=ux;=u_x8[```, which probably is the output of a certain string that has been encrypted with this algorithm. So I guess the only thing to do is to write a function that decrypts it...
+
+## Progress report
+- I have written a refactored version of the module. While doing this, I realized that the encryption method that is being used is a substitution cipher with random substitutions.

@@ -1,5 +1,5 @@
 -module(enc).
--export([encrypt/2]).
+-export([encrypt/2, decrypt/2]).
 
 encrypt(Text, Seed) ->
     set_seed(Seed),
@@ -19,3 +19,9 @@ make_substitution_map() ->
 
 substitute_char(C, Map) ->
     proplists:get_value(C, Map).
+
+decrypt(Cipher, Seed) ->
+    set_seed(Seed),
+    Map = make_substitution_map(),
+    Flipped = [{Enc, Dec} || {Dec, Enc} <- Map],
+    [substitute_char(C, Flipped) || C <- Cipher].

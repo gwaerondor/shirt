@@ -13,7 +13,7 @@ It has a weird string at the end, ```M$8xU=c_ux5=ux;=u_x8[```, which probably is
 
 - I have broken the cipher through a brute-force attack. Though not much force was needed. This is how I did it.
 
-I assumed that a string of length 20 must have at least one character that is a space. I know that the original string must also be of length 20 as it is a substitution cipher. This would make it easier to sort out at least some of the hits.
+I assumed that a string of length 20 must have at least one character that is a space. I know that the original string must also be of length 20 as it is a substitution cipher. This would filter at least some of the uninteresting results, making it easier to analyse which decrypted string is the correct one.
 
 ```erlang
 Enc = "M$8xU=c_ux5=ux;=u_x8[",
